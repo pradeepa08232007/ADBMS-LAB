@@ -1,0 +1,9 @@
+INSERT INTO students VALUES (3, 'Bob', 22);
+
+SAVEPOINT sp1;
+
+INSERT INTO students VALUES (4, 'David', 23);
+
+ROLLBACK TO sp1;
+
+COMMIT;
