@@ -1,0 +1,41 @@
+-- Create first table
+CREATE TABLE Student1 (
+    id INT,
+    name VARCHAR(20)
+);
+
+-- Insert records
+INSERT INTO Student1 VALUES (1, 'Arun');
+INSERT INTO Student1 VALUES (2, 'Priya');
+INSERT INTO Student1 VALUES (3, 'Rahul');
+
+-- Create second table
+CREATE TABLE Student2 (
+    id INT,
+    name VARCHAR(20)
+);
+
+-- Insert records
+INSERT INTO Student2 VALUES (3, 'Rahul');
+INSERT INTO Student2 VALUES (4, 'Anu');
+INSERT INTO Student2 VALUES (5, 'Kiran');
+
+-- 1. UNION
+SELECT * FROM Student1
+UNION
+SELECT * FROM Student2;
+
+-- 2. UNION ALL
+SELECT * FROM Student1
+UNION ALL
+SELECT * FROM Student2;
+
+-- 3. INTERSECT
+SELECT * FROM Student1
+INTERSECT
+SELECT * FROM Student2;
+
+-- 4. MINUS (Oracle)
+SELECT * FROM Student1
+MINUS
+SELECT * FROM Student2;
