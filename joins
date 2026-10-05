@@ -1,0 +1,36 @@
+CREATE TABLE Student (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(20),
+    Dept_ID INT
+);
+
+CREATE TABLE Department (
+    Dept_ID INT PRIMARY KEY,
+    Dept_Name VARCHAR(20)
+);
+
+INSERT INTO Student VALUES (1, 'Arun', 10);
+INSERT INTO Student VALUES (2, 'Priya', 20);
+INSERT INTO Student VALUES (3, 'Rahul', 10);
+
+INSERT INTO Department VALUES (10, 'CSE');
+INSERT INTO Department VALUES (20, 'ECE');
+INSERT INTO Department VALUES (30, 'IT');
+
+-- 1. INNER JOIN
+SELECT Student.Name, Department.Dept_Name
+FROM Student
+INNER JOIN Department
+ON Student.Dept_ID = Department.Dept_ID;
+
+-- 2. LEFT JOIN
+SELECT Student.Name, Department.Dept_Name
+FROM Student
+LEFT JOIN Department
+ON Student.Dept_ID = Department.Dept_ID;
+
+-- 3. RIGHT JOIN
+SELECT Student.Name, Department.Dept_Name
+FROM Student
+RIGHT JOIN Department
+ON Student.Dept_ID = Department.Dept_ID;
