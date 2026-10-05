@@ -1,0 +1,21 @@
+DECLARE
+    a NUMBER := 20;
+    b NUMBER := 10;
+BEGIN
+    -- Arithmetic operators
+    DBMS_OUTPUT.PUT_LINE('Addition = ' || (a + b));
+    DBMS_OUTPUT.PUT_LINE('Subtraction = ' || (a - b));
+    DBMS_OUTPUT.PUT_LINE('Multiplication = ' || (a * b));
+    DBMS_OUTPUT.PUT_LINE('Division = ' || (a / b));
+
+    -- Relational operator
+    IF a > b THEN
+        DBMS_OUTPUT.PUT_LINE('A is greater than B');
+    END IF;
+
+    -- Logical operator
+    IF a > 0 AND b > 0 THEN
+        DBMS_OUTPUT.PUT_LINE('Both numbers are positive');
+    END IF;
+END;
+/
