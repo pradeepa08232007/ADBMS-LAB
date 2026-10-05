@@ -1,0 +1,28 @@
+CREATE TABLE Numbers (
+    Num INT
+);
+
+INSERT INTO Numbers VALUES (10);
+INSERT INTO Numbers VALUES (-25);
+INSERT INTO Numbers VALUES (15);
+
+-- ABS() - returns absolute value
+SELECT ABS(Num) AS Absolute_Value
+FROM Numbers;
+
+-- POWER() - returns power of a number
+SELECT POWER(Num, 2) AS Square
+FROM Numbers;
+
+-- MOD() - returns remainder
+SELECT MOD(Num, 3) AS Remainder
+FROM Numbers;
+
+-- ROUND() - rounds a number
+SELECT ROUND(15.678, 2) AS Rounded_Value;
+
+-- CEIL() - rounds upward
+SELECT CEIL(15.3) AS Ceiling_Value;
+
+-- FLOOR() - rounds downward
+SELECT FLOOR(15.8) AS Floor_Value;
