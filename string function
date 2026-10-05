@@ -1,0 +1,32 @@
+CREATE TABLE Student (
+    id INT,
+    name VARCHAR(30)
+);
+
+INSERT INTO Student VALUES (1, 'Arun Kumar');
+INSERT INTO Student VALUES (2, 'Priya');
+INSERT INTO Student VALUES (3, 'Rahul Sharma');
+
+-- 1. UPPER() - converts text to uppercase
+SELECT UPPER(name) AS Upper_Name
+FROM Student;
+
+-- 2. LOWER() - converts text to lowercase
+SELECT LOWER(name) AS Lower_Name
+FROM Student;
+
+-- 3. LENGTH() - returns the length of the string
+SELECT name, LENGTH(name) AS Name_Length
+FROM Student;
+
+-- 4. CONCAT() - joins two strings
+SELECT CONCAT(name, ' Student') AS Full_Name
+FROM Student;
+
+-- 5. SUBSTRING() - extracts part of a string
+SELECT name, SUBSTRING(name, 1, 5) AS Sub_Name
+FROM Student;
+
+-- 6. REPLACE() - replaces part of a string
+SELECT REPLACE(name, 'a', 'A') AS Replaced_Name
+FROM Student;
