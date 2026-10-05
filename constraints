@@ -1,0 +1,15 @@
+CREATE TABLE Student (
+    Roll_No INT PRIMARY KEY,
+    Name VARCHAR(20) NOT NULL,
+    Age INT CHECK (Age >= 18),
+    Email VARCHAR(30) UNIQUE,
+    City VARCHAR(20) DEFAULT 'Chennai'
+);
+
+INSERT INTO Student
+VALUES (101, 'Arun', 20, 'arun@gmail.com', 'Madurai');
+
+INSERT INTO Student
+VALUES (102, 'Priya', 19, 'priya@gmail.com', 'Chennai');
+
+SELECT * FROM Student;
